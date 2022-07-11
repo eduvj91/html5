@@ -106,11 +106,40 @@ Un `section` puede contener `articles`, por ejemplo, si tenemos varios artículo
 El `article` es diferente como un componente de la página de contenido independiente, esto implica que esta puede contener un `deader` y un `footer`.
 También existe el caso de que `article` contenga un `secction`, el artículo independiente podría ser "navegadores" y este contener dentro secciones como "navegadores más utilizados en 2020"
 
-> La forma correcta de saber si hemos puesto semantimacemnte bien nuestra estructura es con la herramienta en linea
+````html
+	<main>
+		<section>
+			<h2>Noticias del día</h2>
+			<article>
+				<h3>Noticia 1</h3>
+				<p>Este es el párrafo de la noticia</p>
+			</article>
+			<article>
+				<h3>Noticia 2</h3>
+				<p>Este es el párrafo de la noticia</p>
+			</article>
+			<article>
+				<h3>Noticia 3</h3>
+				<p>Este es el párrafo de la noticia</p>
+				<p>Esto ya funciona</p>
+			</article>
+		</section>
 
-``usando codigo``
-Saldo de lineas
+		<article>
+			<h2>Navegadores mas utilizados en 2020</h2>
+			<section>
+				<p>Descripción del titulo</p>
+			</section>
+		</article>
+	</main>
+````
 
-usando mas codigo ``este es codigo `dontro de otro codigo` aver que pasa `` saliendo del codigo.
+## Elementos de bloque y de linea
 
+Los elementos de bloque van a ocupar todo el ancho disponible aunque su contenido no lo haga, por lo que los elementos a continuación saltarán a la siguiente línea.
 
+````html
+<h1>Soy un elemento de bloque</h1>
+<p>Soy un elemento de bloque</p>
+<span>Soy un elemento de línea</span>
+````
